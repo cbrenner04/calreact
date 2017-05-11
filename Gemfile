@@ -51,6 +51,8 @@ end
 
 # addons
 gem 'react_on_rails', '~> 7.0', '>= 7.0.4'
+# error bundling on heroku fixed adding line below
+gem 'libv8', '~> 5.3', '>= 5.3.332.38.5'
 
 group :production do
   gem 'pg', '~> 0.19.0'
