@@ -1,5 +1,11 @@
-class Appointments extends React.Component {
-  constructor(props) {
+import React, {Component} from 'react';
+import update from 'immutability-helper';
+
+import AppointmentForm from './appointment_form';
+import {AppointmentList} from './appointment_list';
+
+export default class Appointments extends Component {
+  constructor(props, _railsContext) {
     super(props)
     this.state = {
       appointments: this.props.appointments,
@@ -25,7 +31,7 @@ class Appointments extends React.Component {
 
   addNewAppointment(appointment) {
     const appointments =
-      React.addons.update(this.state.appointments, { $push: [appointment] })
+      update(this.state.appointments, { $push: [appointment] })
     this.setState({
       appointments: appointments.sort(function(a, b) {
         return new Date(a.appt_time) - new Date(b.appt_time)
@@ -40,7 +46,7 @@ class Appointments extends React.Component {
           appt_time={ this.state.appt_time }
           onUserInput={ (object) => this.handleUserInput(object) }
           onFormSubmit={ () =>  this.handleFormSubmit() } />
-        <AppointmentsList appointments={ this.state.appointments } />
+        <AppointmentList appointments={ this.state.appointments } />
       </div>
     )
   }

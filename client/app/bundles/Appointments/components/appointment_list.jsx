@@ -1,4 +1,8 @@
-const AppointmentsList = ({ appointments }) =>
+import React from 'react';
+
+import {Appointment} from './appointment';
+
+export const AppointmentList = ({ appointments }) =>
   <div>
     { appointments.map(function(appointment) {
       return (

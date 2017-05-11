@@ -55,3 +55,5 @@ gem 'react_on_rails', '~> 7.0', '>= 7.0.4'
 group :production do
   gem 'pg', '~> 0.19.0'
 end
+
+gem 'mini_racer', platforms: :ruby
