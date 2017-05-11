@@ -50,7 +50,7 @@ group :development do
 end
 
 # addons
-gem 'react-rails', '~> 1.10'
+gem 'react_on_rails', '~> 7.0', '>= 7.0.4'
 
 group :production do
   gem 'pg', '~> 0.19.0'
