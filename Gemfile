@@ -59,3 +59,7 @@ group :production do
 end
 
 gem 'mini_racer', platforms: :ruby
+
+# heroku
+gem "rails_12factor", group: :production
+ruby "2.4.0"
