@@ -3,6 +3,8 @@ class Appointment < ApplicationRecord
   validates :title, length: { minimum: 3 }
   validate :appt_time_cannot_be_in_past
 
+  belongs_to :user
+
   private
 
   def appt_time_cannot_be_in_past

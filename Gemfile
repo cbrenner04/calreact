@@ -62,6 +62,10 @@ gem 'mini_racer', platforms: :ruby
 
 gem 'rack-cors', '~> 1.0', '>= 1.0.1'
 
+gem 'devise_token_auth', '~> 0.1.42'
+
+gem 'omniauth', '~> 1.6', '>= 1.6.1'
+
 # heroku
 gem "rails_12factor", group: :production
 ruby "2.4.0"
