@@ -60,6 +60,8 @@ end
 
 gem 'mini_racer', platforms: :ruby
 
+gem 'rack-cors', '~> 1.0', '>= 1.0.1'
+
 # heroku
 gem "rails_12factor", group: :production
 ruby "2.4.0"
